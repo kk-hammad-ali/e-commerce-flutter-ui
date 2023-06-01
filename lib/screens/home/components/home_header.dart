@@ -1,7 +1,6 @@
 import 'package:e_commerce/common/dimension.dart';
 import 'package:e_commerce/screens/cart/cart_Screen.dart';
 import 'package:e_commerce/screens/home/components/counter_button.dart';
-import 'package:e_commerce/screens/home/components/search_bar.dart';
 import 'package:flutter/material.dart';
 
 class HomeHeader extends StatelessWidget {
@@ -12,7 +11,8 @@ class HomeHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: AppDimensions.getScreenWidth(20)),
+      padding:
+          EdgeInsets.symmetric(horizontal: AppDimensions.getScreenWidth(20)),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -20,11 +20,11 @@ class HomeHeader extends StatelessWidget {
           CounterButton(
             iconPath: 'assets/icons/Bell.svg',
             notificatonCount: 4,
-            press: (){},
+            press: () {},
           ),
           CounterButton(
             iconPath: 'assets/icons/Cart Icon.svg',
-            press: (){
+            press: () {
               Navigator.pushNamed(context, CartScreen.routeName);
             },
           )
@@ -33,4 +33,3 @@ class HomeHeader extends StatelessWidget {
     );
   }
 }
-
